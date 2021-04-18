@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/js/bootstrap.min.js">
+   <style>
+      
+   </style>
+    <title>Document</title>
+    
+    <script src="./uigenerator.js"></script> 
+    <script src="./datautility.js"></script>
+    <script src="./validatedata.js"></script>
+    <script src="./applications.js"></script>
+    
+    <script>
+        window.onload=loadData
+
+    </script>
+   
+    
+</head>
+
+<body>
+  <div class="container">
+    <h1>Product Management App with ES 6</h1>
+      <br>
+        <div class="form-group col-md-4 mb-3">
+          <button id="add_p" class="btn btn-outline-success">Add Product</button>
+          <button id="mod_p" class="btn btn-outline-info">Modify Product</button> <br><br>
+        </div>
+     <div class="form-group col-md-4 mb-3 alert alert-danger" role="alert" id="Message_fail" style="display: none;"></div>
+     <div class="form-group col-md-4 mb-3 alert alert-success" role="alert" id="Message_succ" style="display: none;"></div>
+    <div class="form-group col-md-4 mb-3">
+    
+    <label id="mod_lab">Select product to Modify</label>
+    <span id="p_dropdown" style="display: none;" ><select name="group" id="pname_dropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" > </select></span>
+    <label >ProductId</label>
+    <input type="text" id="pid" name="pid" class="form-control" >
+    <input type="hidden" id="pRowId" name="pRowId" ><br>
+  </div>
+
+  <div class="form-group col-md-4 mb-3">
+    <label >ProductName</label>
+    <input type="text" id="pname" name="pname" class="form-control"><br>
+  </div>
+
+  <div class="form-group col-md-4 mb-3">
+    <label >CategoryName</label>
+     <span id="cat_data"></span><br>
+    </div>
+
+    <div class="form-group col-md-4 mb-3">
+    <label >Manufacturer</label>
+    <span id="man_data"></span><br>
+  </div>
+  <div class="form-group col-md-4 mb-3">
+    <label >Description</label>
+    <input type="text" id="desc" name="desc" class="form-control"><br>
+  </div>
+  <div class="form-group col-md-4 mb-3">
+    <label >BasePrice</label>
+    <input type="text" id="bprice" name="bprice" class="form-control"><br>
+  </div>
+    
+  
+    <div class="form-group col-md-4 mb-3">
+    <button id="save_p" class="btn btn-success">Save Product</button>
+    <button id="modify_p" class="btn btn-info" style="display: none;">Modify</button>
+  </div>
+  <div class="form-group col-md-4 mb-3 alert alert-danger" role="alert" id="Message_del" style="display: none;"></div>
+<div id="pdata" class="table-wrapper-scroll-y my-custom-scrollbar"></div>
+
+</div>
+</body>
+</html>
